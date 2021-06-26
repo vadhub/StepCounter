@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     private static final int REQUEST_PHYSICAL_ACTIVITY_CODE = 123334;
 
+    //check permission activity_recognition for step sensor if permission granted start service
     private void checkPermission(){
         if(ContextCompat.checkSelfPermission(this, Manifest.permission.ACTIVITY_RECOGNITION)== PackageManager.PERMISSION_DENIED){
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
@@ -37,6 +38,8 @@ public class MainActivity extends AppCompatActivity {
         checkPermission();
     }
 
+
+    //check permission on granted or denied
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -50,13 +53,12 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-    }
 
+    //start service SensorBackgroundCounter in background
     private void startServiceForeground(){
         Intent intent = new Intent(MainActivity.this, SensorBackgroundCounter.class);
         startService(intent);
+
+        Toast.makeText(this, "start sensor", Toast.LENGTH_SHORT).show();
     }
 }

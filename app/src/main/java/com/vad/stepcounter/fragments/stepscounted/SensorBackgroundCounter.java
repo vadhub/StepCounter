@@ -25,6 +25,8 @@ public class SensorBackgroundCounter extends Service implements SensorEventListe
         }else{
             Toast.makeText(this, "This device haven`t step sensor! Sorry...", Toast.LENGTH_SHORT).show();
         }
+
+        Toast.makeText(this, "ok", Toast.LENGTH_SHORT).show();
         return START_NOT_STICKY;
     }
 
@@ -37,7 +39,7 @@ public class SensorBackgroundCounter extends Service implements SensorEventListe
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
         float steps = sensorEvent.values[0];
-        Toast.makeText(this, ""+steps, Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "sensor: "+steps, Toast.LENGTH_SHORT).show();
     }
 
     @Override
