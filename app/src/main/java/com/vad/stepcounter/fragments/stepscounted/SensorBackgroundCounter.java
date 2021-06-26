@@ -37,6 +37,7 @@ public class SensorBackgroundCounter extends Service implements SensorEventListe
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
         float steps = sensorEvent.values[0];
+        Toast.makeText(this, ""+steps, Toast.LENGTH_SHORT).show();
     }
 
     @Override
