@@ -1,4 +1,4 @@
-package com.vad.stepcounter.fragments;
+package com.vad.stepcounter.fragments.stepscounted;
 
 import android.os.Bundle;
 
