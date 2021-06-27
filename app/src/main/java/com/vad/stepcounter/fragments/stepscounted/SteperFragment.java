@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 import com.vad.stepcounter.R;
 
-public class SteperFragment extends Fragment {
+public class SteperFragment extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

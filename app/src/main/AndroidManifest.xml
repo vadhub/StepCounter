@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.vad.stepcounter">
 
-    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION"/>
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
 
     <application
         android:allowBackup="true"
@@ -11,8 +11,18 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.StepCounter">
+        <receiver android:name=".fragments.stepscounted.StepViewAppWidget">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
 
-        <service android:name=".fragments.stepscounted.SensorBackgroundCounter"/>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/step_view_app_widget_info" />
+        </receiver>
+
+        <service android:name=".fragments.stepscounted.SensorBackgroundCounter" />
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -46,10 +46,4 @@ public class SensorBackgroundCounter extends Service implements SensorEventListe
     public void onAccuracyChanged(Sensor sensor, int i) {
 
     }
-
-    @Override
-    public void onDestroy() {
-        super.onDestroy();
-        mSensorManager.unregisterListener(this);
-    }
 }
