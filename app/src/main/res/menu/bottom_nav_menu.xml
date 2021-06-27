@@ -1,4 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+    <item
+        android:id="@+id/goals_nav"
+        android:title="@string/goals"
+        android:icon="@drawable/ic_baseline_fact_check_24"/>
+
+
+    <item
+        android:id="@+id/step_nav"
+        android:title="@string/step"
+        android:icon="@drawable/ic_baseline_directions_walk_24"/>
+
+
+    <item
+        android:id="@+id/statistic_nav"
+        android:title="@string/statistic"
+        android:icon="@drawable/ic_baseline_assessment_24"/>
+
 </menu>
