@@ -33,7 +33,6 @@ public class SensorBackgroundCounter extends Service implements SensorEventListe
             Toast.makeText(this, "This device haven`t step sensor! Sorry...", Toast.LENGTH_SHORT).show();
         }
 
-        Toast.makeText(this, "ok", Toast.LENGTH_SHORT).show();
         return START_NOT_STICKY;
     }
 
